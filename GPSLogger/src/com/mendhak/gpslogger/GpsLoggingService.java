@@ -506,8 +506,7 @@ public class GpsLoggingService extends Service
 			Utilities.LogInfo("Requesting GPS location updates");
 			// gps satellite based
 			gpsLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-					AppSettings.getMinimumSeconds() * 1000, AppSettings.getMinimumDistance(),
-					gpsLocationListener);
+					1000, 0, gpsLocationListener);
 
 			gpsLocationManager.addGpsStatusListener(gpsLocationListener);
 
