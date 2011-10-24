@@ -26,6 +26,7 @@ public class AppSettings extends Application
 	private static String autoEmailTarget;
 	private static boolean smtpSsl;
 	private static boolean debugToFile;
+	private static boolean useMeterPerSecond;
 
 	
 
@@ -44,6 +45,28 @@ public class AppSettings extends Application
 	static void setUseImperial(boolean useImperial)
 	{
 		AppSettings.useImperial = useImperial;
+	}
+	
+	/**
+	 * @return useMeterPerSecond
+	 */
+	public static boolean shouldUseMeterPerSecond()
+	{
+		return useMeterPerSecond;
+	}
+	
+	/**
+	 * Use m/s
+	 */
+	static void useMeterPerSecond() {
+		useMeterPerSecond = true;
+	}
+	
+	/**
+	 * Use km/h
+	 */
+	static void useKilometerPerHour() {
+		useMeterPerSecond = false;
 	}
 
 	/**

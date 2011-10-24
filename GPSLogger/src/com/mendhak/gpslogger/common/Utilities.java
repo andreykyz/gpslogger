@@ -491,6 +491,16 @@ public class Utilities
 		return MetersToFeet((int) m);
 	}
 	
+	/**
+	 * Convert given meters per second to kilometers per hour
+	 * 
+	 * @param metPerS - meters per second
+	 * @return - kilometers per hour
+	 */
+	public static int metPersTokmPerh(double metPers) {
+		return (int) ((metPers*1000)/60);
+	}
+	
 	public static boolean IsEmailSetup(Context ctx)
 	{
         return AppSettings.isAutoEmailEnabled()
